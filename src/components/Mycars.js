@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Car from "./Cars";
 
-export default function Mycars() {
+export default function MyCars() {
   const [state, setState] = useState({
     voitures: [
       { name: "Ford", color: "red", year: 2000 },
@@ -16,14 +16,20 @@ export default function Mycars() {
     color: "",
   });
 
-  const addTenYears = () => {
-    const updateSate = state.voitures.map((param) => {
-      return { ...param, year: param.year - 10 };
-    });
-    setState({
-      updateSate,
-    });
+    const addTenYears = () => {
+      setState((prevState) => ({
+        ...prevState,
+        voitures: prevState.voitures.map((param) => ({ ...param, year: param.year - 10 })),
+      }));;
   };
+  // const addTenYears = () => {
+  //   const updateSate = state.voitures.map((param) => {
+  //     return { ...param, year: param.year - 10 };
+  //   });
+  //   setState({
+  //     updateSate,
+  //   });
+  // };
 
   const handleChange = (e) => {
     setState({ valeurInput: e.target.value });
