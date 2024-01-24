@@ -20,8 +20,15 @@ export default function MyCars() {
       setState((prevState) => ({
         ...prevState,
         voitures: prevState.voitures.map((param) => ({ ...param, year: param.year - 10 })),
-      }));;
+      }));
   };
+
+//   const addTenYears = () => {
+//     setState((State) => ({
+//       ...State,
+//       voitures: prevState.voitures.map((param) => ({ ...param, year: param.year - 10 })),
+//     }));
+// };
   // const addTenYears = () => {
   //   const updateSate = state.voitures.map((param) => {
   //     return { ...param, year: param.year - 10 };
