@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Car from "./Cars";
 
-export default function Mycars() {
+export default function MyCars() {
   const [state, setState] = useState({
     voitures: [
       { name: "Ford", color: "red", year: 2000 },
